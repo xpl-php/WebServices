@@ -20,18 +20,16 @@ $client = new Client(new FopenAdapter); // requires INI fopen_allow_url = 1
 ```
 
 2. Create a new request:
-
 ```php
 $yql_request = new YqlRequest("select name from yahoo.finance.sectors");
 ```
 
 3. Execute the request by invoking the client and passing it the object:
-
+```php
 $yql_response = $client($yql_request);
 ```
 
 4. Fetch the results from the response:
-
 ```php
 $results = $yql_response->getResults();
 
